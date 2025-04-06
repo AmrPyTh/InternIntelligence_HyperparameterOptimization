@@ -16,9 +16,9 @@ The goal of this task was to boost the performance of a classification model by 
 
 ## 🧠 Model Info
 
-- **Model Type:** (e.g., Random Forest / SVM / Logistic Regression)  
+- **Model Type:** (e.g., Random Forest / XgBoost / Logistic Regression)  
 - **Dataset Used:** (e.g., Iris / Breast Cancer / Custom Dataset)  
-- **Metric Improved:** (e.g., Accuracy improved from 85% ➡️ 92%)
+- **Metric Improved:** (e.g., Accuracy improved from 85% ➡️ 96%)
 
 > 📌 *Feel free to edit this section with your actual model and dataset details.*
 
