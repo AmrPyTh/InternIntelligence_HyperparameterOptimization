@@ -1,30 +1,36 @@
-# InternIntelligence_HyperparameterOptimization
+# XGBoost Hyperparameter Optimization
 
-This repository contains the work I completed as part of my internship with **@InternIntelligence**, focusing on optimizing the hyperparameters of a machine learning model to improve its performance.
+Hyperparameter optimization project completed during the InternIntelligence internship. It compares Grid Search and Randomized Search for an XGBoost classifier on the scikit-learn Breast Cancer dataset.
 
-## 📌 Objective
+## Dataset
 
-The goal of this task was to boost the performance of a classification model by tuning its hyperparameters using industry-standard optimization techniques.
+- 569 samples
+- 30 numerical features
+- Binary classification: malignant or benign
+- Train/test split: 80/20 with random state 42
 
-## 🛠️ Techniques Used
+## Approach
 
-- **Grid Search**
-- **Randomized Search**
-- **Cross-Validation**
-- **Scikit-learn pipelines**
-- **Model evaluation with accuracy, precision, recall, and F1-score**
+- Built an XGBClassifier with mlogloss evaluation
+- Tuned n_estimators, max_depth, and learning_rate
+- Compared GridSearchCV and RandomizedSearchCV
+- Used 3-fold cross-validation with accuracy as the scoring metric
+- Evaluated the best estimators using precision, recall, F1-score, and accuracy
 
-## 🧠 Model Info
+## Results
 
-- **Model Type:** (e.g., Random Forest / XgBoost / Logistic Regression)  
-- **Dataset Used:** (e.g., Iris / Breast Cancer / Custom Dataset)  
-- **Metric Improved:** (e.g., Accuracy improved from 85% ➡️ 96%)
+| Search method | Best parameters | Test accuracy |
+|---|---|---:|
+| Grid Search | learning_rate=0.1, max_depth=3, n_estimators=100 | 96% |
+| Randomized Search | learning_rate=0.05, max_depth=3, n_estimators=150 | 96% |
 
-> 📌 *Feel free to edit this section with your actual model and dataset details.*
+Both approaches achieved a weighted F1-score of 0.96 on the 114-sample test set.
 
-## 📊 Results
+## Technologies
 
-After applying hyperparameter optimization:
-- ✅ Improved model accuracy and generalization
-- 🔍 Identified the most impactful parameters
-- 💡 Reduced overfitting using cross-validation
+Python · XGBoost · Scikit-learn · Pandas · NumPy · Jupyter Notebook
+
+## Repository contents
+
+- Code.ipynb — data loading, model tuning, evaluation, and results
+- Task.png — internship task reference
